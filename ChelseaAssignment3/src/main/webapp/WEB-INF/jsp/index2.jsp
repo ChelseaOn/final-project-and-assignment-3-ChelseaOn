@@ -6,8 +6,8 @@
 <a href="/Horror"> Horror</a>
 <a href="/Comedy"> Comedy</a>
 <a href="/Romance"> Romance</a>
-<a href="/Thriller"> Horror</a>
-<a href="/Action"> Horror</a>
+<a href="/Thriller"> Thriller</a>
+<a href="/Action"> Action</a>
 </body>
 </html>
 
