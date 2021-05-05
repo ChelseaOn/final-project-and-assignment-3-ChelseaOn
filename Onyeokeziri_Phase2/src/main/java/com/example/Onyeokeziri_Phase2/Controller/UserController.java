@@ -15,17 +15,20 @@ public class UserController {
     @Autowired
     UserRepo userRepo;
 
+//Implements Homepage:Login and Registration buttons
+
     @GetMapping("/")
     public String viewHomePage() {
         return "index";
     }
+    //Implements Registration form page:Create new user
     @GetMapping("/register")
     public String showRegistrationForm(Model model) {
         model.addAttribute("user", new User());
 
         return "registration";
     }
-
+//Implements successful registration page: User is sent to page once registered successfully where they can login
     @PostMapping("/process_register")
     public String processRegister(User user) {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();

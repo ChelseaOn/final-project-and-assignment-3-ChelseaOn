@@ -13,21 +13,21 @@ public class User {
 
     @Column(name= "userID")
     private ValueHandlerFactory.LongValueHandler userID;
-    @Column(name="username")
+    @Column(name="UserName")
     private String userName;
     @Column(name="password")
     private String password;
     @Column(name="Role")
-    private String Role;
+    private String role;
     @Column (name="Email")
-    private String Email;
+    private String email;
 
     public User(ValueHandlerFactory.LongValueHandler userID, String userName, String password, String role, String email) {
         this.userID = userID;
         this.userName = userName;
         this.password = password;
-        Role = role;
-        Email = email;
+        this.role = role;
+        this.email = email;
     }
 
     public User() {
@@ -60,18 +60,18 @@ public class User {
     }
 
     public String getRole() {
-        return Role;
+        return role;
     }
 
     public void setRole(String role) {
-        Role = role;
+        this.role = role;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 }
