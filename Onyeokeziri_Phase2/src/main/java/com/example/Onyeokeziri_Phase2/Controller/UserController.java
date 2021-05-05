@@ -15,7 +15,7 @@ public class UserController {
     @Autowired
     UserRepo userRepo;
 
-    @GetMapping("")
+    @GetMapping("/")
     public String viewHomePage() {
         return "index";
     }
