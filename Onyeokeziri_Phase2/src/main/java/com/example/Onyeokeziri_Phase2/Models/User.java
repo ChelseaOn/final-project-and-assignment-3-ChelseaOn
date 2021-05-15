@@ -5,16 +5,16 @@ import org.hibernate.query.criteria.internal.ValueHandlerFactory;
 import javax.persistence.*;
 
 @Entity
-@Table(name= "User")
+@Table (name="User")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name= "userID")
-    private ValueHandlerFactory.LongValueHandler userID;
+    private int userid;
     @Column(name="UserName")
-    private String userName;
+    private String username;
     @Column(name="password")
     private String password;
     @Column(name="Role")
@@ -22,33 +22,20 @@ public class User {
     @Column (name="Email")
     private String email;
 
-    public User(ValueHandlerFactory.LongValueHandler userID, String userName, String password, String role, String email) {
-        this.userID = userID;
-        this.userName = userName;
-        this.password = password;
-        this.role = role;
-        this.email = email;
+    public int getUserid() {
+        return userid;
     }
 
-    public User() {
-
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 
-
-    public ValueHandlerFactory.LongValueHandler getUserID() {
-        return userID;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserID(ValueHandlerFactory.LongValueHandler userID) {
-        this.userID = userID;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -75,3 +62,5 @@ public class User {
         this.email = email;
     }
 }
+
+

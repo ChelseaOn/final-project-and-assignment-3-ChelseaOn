@@ -1,0 +1,21 @@
+
+<html>
+<body>
+
+<form action="/postlogin" method="post">
+    <c:choose>
+        <c:when test="${nouser.equals(true)}" >
+            <p>  "${nu}" </p>
+        </c:when>
+        <c:when test="${pwdNomatch.equals(true)}" >
+            <p>  "${pwderror}" </p>
+        </c:when>
+    </c:choose>
+    <label>User Name</label><br>
+    <input type="text" name="uname" > <br>
+    <label> Password</label><br>
+    <input type="PASSWORD" name="password"><br>
+    <input type="submit" value="Login"><br>
+</form>
+</body>
+</html>
